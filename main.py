@@ -10,7 +10,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     data = pd.read_csv('data.csv')
     location = data.latitude.astype(str) + ", " + data.longitude.astype(str)
